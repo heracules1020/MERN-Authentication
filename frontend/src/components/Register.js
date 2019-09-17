@@ -106,8 +106,9 @@ Register.propTypes = {
 	registerUser: PropTypes.func.isRequired,
 }
 
+
 const mapStateToProps = state => ({
 	errors: state.errors
 })
-
+//withRouter add
 export default connect(mapStateToProps,{ registerUser })(withRouter(Register));
