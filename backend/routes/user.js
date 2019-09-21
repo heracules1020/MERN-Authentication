@@ -34,7 +34,11 @@ router.post('/register', function(req, res){
 				password: req.body.password,
 				avatar
 			})
-
+			// newUser
+			// .save()
+			// .then(user => {
+			// 	res.status(200).json(user)
+			// })
 			bcrypt.getSalt(10, (err, salt) => {
 				if(err) console.error('There was an error', err)
 				else{
@@ -45,7 +49,7 @@ router.post('/register', function(req, res){
 							newUser
 								.save()
 								.then(user => {
-									res.json(user)
+									res.status(200).json(user)
 								})
 						}
 					})
